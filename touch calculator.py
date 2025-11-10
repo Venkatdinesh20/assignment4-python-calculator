@@ -23,6 +23,10 @@ def divide(a: float, b: float) -> float:
         raise ValueError("Cannot divide by zero")
     return a / b
 
+def power(a: float, b: float) -> float:
+    """Calculate a raised to the power of b."""
+    return a ** b
+
 def main():
     """Test all calculator functions."""
     # Test addition
@@ -51,6 +55,11 @@ def main():
         result = divide(10, 0)
     except ValueError as e:
         print(f"Error caught successfully: {e}")
+    
+    # Test power function
+    print("\nTesting power function:")
+    result = power(2, 3)
+    print(f"2 ^ 3 = {result}")
 
 if __name__ == "__main__":
     main()
